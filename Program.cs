@@ -24,7 +24,7 @@ string [] ChangeArray (string [] array) // изменение массива
  int d = 0;
  for (int j = 0; j < array.Length; j++)
  {
-    if (array[j].Length <= 3)
+    if (array[j].Length < 4)
     {
       for (int k = d; k < newArray.Length; k++)
       {
