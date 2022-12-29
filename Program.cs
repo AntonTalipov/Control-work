@@ -35,3 +35,13 @@ string [] ChangeArray (string [] array) // изменение массива
 }
 return newArray;
 }
+void PrintArray(string [] newArray)
+{
+for (int i = 0; i < newArray.Length; i++)
+{
+  Console.Write($"{newArray [i]},  ");
+}
+}
+string [] newString = FillArray (arrayLength);
+string [] changedString = ChangeArray (newString);
+PrintArray (changedString);
