@@ -10,3 +10,28 @@ string [] FillArray (int arrayLength) // заполнение массива с 
     }
     return array;
 }
+string [] ChangeArray (string [] array) // изменение массива
+{ 
+ int num = 0; // длина нового массива
+ for (int i = 0; i < array.Length; i++)
+ { 
+    if (array[i].Length < 4)
+    {
+      num = num + 1;
+    }
+ }
+ string [] newArray = new string [num];
+ int d = 0;
+ for (int j = 0; j < array.Length; j++)
+ {
+    if (array[j].Length <= 3)
+    {
+      for (int k = d; k < newArray.Length; k++)
+      {
+      newArray[k] = array[j];
+      }
+      d++;
+    }
+}
+return newArray;
+}
